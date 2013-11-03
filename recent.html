@@ -2,19 +2,27 @@
 <html ng-app="app">
 <head>
 <title>Recent Changes in {{space}}</title>
+<link rel="stylesheet" href="/bags/tiddlers/common/normalize.css">
 <link rel="stylesheet" href="/tsrc.css">
 </head>
 <body>
 <div class="changes" ng-controller="ChangesCtrl">
     <input type="text" ng-model="filterText" size="30"
         placeholder="Filter Titles, Tags or Times">
-    <ul>
+    <ul class="tiddlers">
         <li class="tiddler hide" ng-class="show"
          ng-repeat="change in changes | filter:filterText | orderBy:'-modified'">
-         <span class="title">
-             <a ng-href="/{{change.title | escape}}">{{change.title}}</a>
-         </span>
+        <a ng-show="multiplemods" class="sitelink" href="{{modifierSite(change)}}"
+            title="{{change.modifier}}">
+            <img src="{{modifierSite(change)}}SiteIcon" alt="siteicon"></a>
+         <a class="title" ng-href="/{{change.title | escape}}">
+             {{change.title}}</a>
         <span class="modified">{{change.modified | modtime}}</span>
+        <ul ng-show="change.tags" class="tags">
+            <li class="tag"
+            ng-repeat="tag in change.tags | orderBy:'toString()'">
+            <a href="/search?q=tag:{{tag | escape}}">{{tag}}</a></li>
+        </ul>
         </li>
     </ul>
 </div>
