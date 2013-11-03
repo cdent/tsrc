@@ -1,35 +1,64 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+#app-picker {
+    top: 6px !important;
+    right: 24px !important;
+}
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #35313b;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #35313b;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2c2c2c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    border-color: #252525;
+    min-height: 40px;
+    color: #999;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 200;
+    line-height: 2em;
+    padding-left: 12px;
+    margin: 0;
 }
 
 a {
-	color: #0082af;
-	text-decoration: none;
+    color: #0082af;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .changes {
-	width: 50%;
-	margin: 0 auto 0 auto;
+    width: 50%;
+    margin: 0 auto 0 auto;
 }
 
 .changes input {
-	font-size: 1.875em;
-	line-height: 1em;
-	outline: none;
-	border: 2px solid #eeeeee;
-	padding: 0.5em 1em;
-	color: #333333;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px;
-	border-radius: 2px;
+    font-size: 1.875em;
+    line-height: 1em;
+    outline: none;
+    border: 2px solid #eeeeee;
+    margin-top: 1em;
+    padding: .5em 1em;
+    color: #333333;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .changes input:focus {

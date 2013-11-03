@@ -6,6 +6,11 @@
 <link rel="stylesheet" href="/tsrc.css">
 </head>
 <body>
+<header>
+    <div>
+        <h1>Recent Changes in {{space}}</h1>
+    </div>
+</header>
 <div class="changes" ng-controller="ChangesCtrl">
     <input type="text" ng-model="filterText" size="30"
         placeholder="Filter Titles, Tags or Times">
@@ -30,5 +35,6 @@
 <script src="/bags/tsrc/tiddlers/moment.js"></script>
 <script src="/bags/tsrc/tiddlers/angular.js"></script>
 <script src="/bags/tsrc/tiddlers/tsrc.js"></script>
+<script src="/bags/common/tiddlers/backstage.js"></script>
 </body>
 </html>
