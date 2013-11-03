@@ -14,7 +14,7 @@
          ng-repeat="change in changes | filter:filterText | orderBy:'-modified'">
         <a ng-show="multiplemods" class="sitelink" href="{{modifierSite(change)}}"
             title="{{change.modifier}}">
-            <img src="{{modifierSite(change)}}SiteIcon" alt="siteicon"></a>
+            <img ng-src="{{modifierSite(change)}}SiteIcon" alt="siteicon"></a>
          <a class="title" ng-href="/{{change.title | escape}}">
              {{change.title}}</a>
         <span class="modified">{{change.modified | modtime}}</span>
