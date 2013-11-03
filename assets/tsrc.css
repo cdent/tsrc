@@ -62,41 +62,47 @@ a:hover {
 }
 
 .changes input:focus {
-	border-left: 2px solid #0082af;
+    border-left: 2px solid #0082af;
 }
 
 .tiddler {
-	clear: both;
-	padding-bottom: 1em;
+    clear: both;
+    padding-bottom: 1em;
 }
 
 .hide {
-	display: none;
+    display: none;
 }
 
 .show {
-	display: block;
+    display: block;
 }
 
 .tag {
-	display: inline;
+    display: inline;
 }
 
 .tags {
-	display: block;
-	padding-left: 0;
+    display: block;
+    padding-left: 0;
 }
 
 .tags:before {
-	content: "tags:";
+    content: "tags:";
 }
 
 .sitelink {
-	float: left;
-	margin-left: -2em;
+    float: left;
+    margin-left: -2em;
 }
 
 .sitelink img {
-	max-width: 24px;
+    max-width: 24px;
+}
+
+footer {
+    position: absolute;
+    right: 20px;
+    font-size: small;
 }
 
