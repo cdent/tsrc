@@ -7,7 +7,7 @@
 <body>
 <div class="changes" ng-controller="ChangesCtrl">
     <input type="text" ng-model="filterText" size="30"
-        placeholder="Filter Titles or Tags">
+        placeholder="Filter Titles, Tags or Times">
     <ul>
         <li class="tiddler hide" ng-class="show"
          ng-repeat="change in changes | filter:filterText | orderBy:'-modified'">
