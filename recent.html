@@ -2,22 +2,25 @@
 <html ng-app="app">
 <head>
 <title>Recent Changes in {{space}}</title>
-<script src="/bags/tsrc/tiddlers/angular.js"></script>
-<script src="/bags/tsrc/tiddlers/tsrc.js"></script>
+<link rel="stylesheet" href="/tsrc.css">
 </head>
 <body>
 <div class="changes" ng-controller="ChangesCtrl">
     <input type="text" ng-model="filterText" size="30"
-        placeholder="Filter Titles">
+        placeholder="Filter Titles or Tags">
     <ul>
-        <li class="tiddler"
+        <li class="tiddler hide" ng-class="show"
          ng-repeat="change in changes | filter:filterText | orderBy:'-modified'">
          <span class="title">
              <a ng-href="/{{change.title | escape}}">{{change.title}}</a>
          </span>
-        <span class="modified">{{change.modified}}</span>
+        <span class="modified">{{change.modified | modtime}}</span>
         </li>
     </ul>
 </div>
+<script src="/status.js"></script>
+<script src="/bags/tsrc/tiddlers/moment.js"></script>
+<script src="/bags/tsrc/tiddlers/angular.js"></script>
+<script src="/bags/tsrc/tiddlers/tsrc.js"></script>
 </body>
 </html>
