@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<title>Recent Changes in {{space}}</title>
+<script src="/bags/tsrc/tiddlers/angular.js"></script>
+<script src="/bags/tsrc/tiddlers/tsrc.js"></script>
+</head>
+<body>
+<div class="changes" ng-controller="ChangesCtrl">
+    <input type="text" ng-model="filterText" size="30"
+        placeholder="Filter Titles">
+    <ul>
+        <li class="tiddler"
+         ng-repeat="change in changes | filter:filterText | orderBy:'-modified'">
+         <span class="title">
+             <a ng-href="/{{change.title | escape}}">{{change.title}}</a>
+         </span>
+        <span class="modified">{{change.modified}}</span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
